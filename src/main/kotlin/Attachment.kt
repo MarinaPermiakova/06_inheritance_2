@@ -1,22 +1,47 @@
 interface Attachment {
     val type: String
-    var attach: Attachment
 }
 
 open class AttachmentImpl(override val type: String, private val audio: Audio?, private val video: Video?,
                           private val photo: Photo?, private val doc: Doc?, private val graffiti: Graffiti?) : Attachment {
-    override var attach: Attachment
+    var attach: Attachment
         get() = TODO("Not yet implemented")
-        set(v) {
+        set(value) {
             when (type) {
-                "audio" -> audio as Attachment
-                "video" -> video as Attachment
-                "photo" -> photo as Attachment
-                "doc" -> doc as Attachment
-                "graffiti" -> graffiti as Attachment
-
+                "audio" -> audio as AudioAttachment
+                "video" -> video as VideoAttachment
+                "photo" -> photo as PhotoAttachment
+                "doc" -> doc as DocAttachment
+                "graffiti" -> graffiti as GraffitiAttachment
             }
         }
+}
+
+
+class AudioAttachment : Attachment {
+    override val type: String = "audio"
+    val audio: Audio = TODO()
+
+}
+
+class VideoAttachment : Attachment {
+    override val type: String = "video"
+    val video: Video = TODO()
+}
+
+class PhotoAttachment : Attachment {
+    override val type: String = "photo"
+    val photo: Photo = TODO()
+}
+
+class DocAttachment : Attachment {
+    override val type: String = "doc"
+    val doc: Doc = TODO()
+}
+
+class GraffitiAttachment : Attachment {
+    override val type: String = "graffiti"
+    val graffiti: Graffiti = TODO()
 }
 
 class Audio(

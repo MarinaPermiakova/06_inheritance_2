@@ -108,7 +108,7 @@ fun main() {
             owner_id = 12,
             no_search = 1,
             title = "song",
-            url = "htpp"
+            url = "htp"
     )
 
     val video = Video(

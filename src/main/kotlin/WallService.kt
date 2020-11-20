@@ -1,5 +1,6 @@
 object WallService {
     private var posts = emptyArray<Post>()
+    var attachments: Array<Attachment> = emptyArray()
 
 
     fun add(post: Post): Post {
@@ -26,9 +27,6 @@ object WallService {
         }
         return res
     }
-
-    var attachments: Array<Attachment> = emptyArray()
-
 
     fun addAttachment(attachment: Attachment): Attachment {
         attachments += attachment

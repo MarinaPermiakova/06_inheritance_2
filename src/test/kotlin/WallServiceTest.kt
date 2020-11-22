@@ -9,47 +9,47 @@ class WallServiceTest {
     fun add() {
         val post = Post(
                 id = 3,
-                owner_id = 111,
-                from_id = 21,
-                created_by = 22,
+                ownerId = 111,
+                fromId = 21,
+                createdBy = 22,
                 date = 22,
                 text = "Hello, world!",
-                reply_owner_id = 33,
-                reply_post_id = 33,
-                friends_only = 1,
+                replyOwnerId = 33,
+                replyPostId = 33,
+                friendsOnly = 1,
                 comments = Comments(
                         count = 9845,
-                        can_post = false,
-                        groups_can_post = true,
-                        can_close = true,
-                        can_open = true
+                        canPost = false,
+                        groupsCanPost = true,
+                        canClose = true,
+                        canOpen = true
                 ),
                 copyright = "Piotr",
                 likes = Likes(
                         count = 2,
-                        user_likes = true,
-                        can_like = true,
-                        can_publish = true
+                        userLikes = true,
+                        canLike = true,
+                        canPublish = true
                 ),
                 reposts = Reposts(
                         count = 3,
-                        user_reposted = false
+                        userReposted = false
                 ),
                 views = Views(
                         count = 3458
                 ),
-                post_type = "message",
-                post_source = null,
+                postType = "message",
+                postSource = null,
                 geo = null,
-                signer_id = 65,
-                copy_history = arrayOf(2, 4),
-                can_pin = true,
-                can_delete = true,
-                can_edit = true,
-                is_pinned = true,
-                marked_as_ads = true,
-                is_favorite = true,
-                postponed_id = 44
+                signerId = 65,
+                copyHistory = arrayOf(2, 4),
+                canPin = true,
+                canDelete = true,
+                canEdit = true,
+                isPinned = true,
+                markedAsAds = true,
+                isFavorite = true,
+                postponedId = 44
         )
         val result = post.id
         assertEquals(3, result)
@@ -59,92 +59,92 @@ class WallServiceTest {
     fun updateTrue() {
         val post = Post(
                 id = 2,
-                owner_id = 111,
-                from_id = 21,
-                created_by = 22,
+                ownerId = 111,
+                fromId = 21,
+                createdBy = 22,
                 date = 22,
                 text = "Hello, world!",
-                reply_owner_id = 33,
-                reply_post_id = 33,
-                friends_only = 1,
+                replyOwnerId = 33,
+                replyPostId = 33,
+                friendsOnly = 1,
                 comments = Comments(
                         count = 9845,
-                        can_post = false,
-                        groups_can_post = true,
-                        can_close = true,
-                        can_open = true
+                        canPost = false,
+                        groupsCanPost = true,
+                        canClose = true,
+                        canOpen = true
                 ),
                 copyright = "Piotr",
                 likes = Likes(
                         count = 2,
-                        user_likes = true,
-                        can_like = true,
-                        can_publish = true
+                        userLikes = true,
+                        canLike = true,
+                        canPublish = true
                 ),
                 reposts = Reposts(
                         count = 3,
-                        user_reposted = false
+                        userReposted = false
                 ),
                 views = Views(
                         count = 3458
                 ),
-                post_type = "message",
-                post_source = null,
+                postType = "message",
+                postSource = null,
                 geo = null,
-                signer_id = 65,
-                copy_history = arrayOf(2, 4),
-                can_pin = true,
-                can_delete = true,
-                can_edit = true,
-                is_pinned = true,
-                marked_as_ads = true,
-                is_favorite = true,
-                postponed_id = 44
+                signerId = 65,
+                copyHistory = arrayOf(2, 4),
+                canPin = true,
+                canDelete = true,
+                canEdit = true,
+                isPinned = true,
+                markedAsAds = true,
+                isFavorite = true,
+                postponedId = 44
         )
 
         val post2 = Post(
                 id = 2,
-                owner_id = 112,
-                from_id = 25,
-                created_by = 22,
+                ownerId = 112,
+                fromId = 25,
+                createdBy = 22,
                 date = 22,
                 text = "Hello, world!",
-                reply_owner_id = 33,
-                reply_post_id = 33,
-                friends_only = 1,
+                replyOwnerId = 33,
+                replyPostId = 33,
+                friendsOnly = 1,
                 comments = Comments(
                         count = 9845,
-                        can_post = false,
-                        groups_can_post = true,
-                        can_close = true,
-                        can_open = true
+                        canPost = false,
+                        groupsCanPost = true,
+                        canClose = true,
+                        canOpen = true
                 ),
                 copyright = "Vladimir",
                 likes = Likes(
                         count = 2,
-                        user_likes = true,
-                        can_like = true,
-                        can_publish = true
+                        userLikes = true,
+                        canLike = true,
+                        canPublish = true
                 ),
                 reposts = Reposts(
                         count = 3,
-                        user_reposted = false
+                        userReposted = false
                 ),
                 views = Views(
                         count = 3458
                 ),
-                post_type = "message",
-                post_source = null,
+                postType = "message",
+                postSource = null,
                 geo = null,
-                signer_id = 65,
-                copy_history = arrayOf(2, 4),
-                can_pin = true,
-                can_delete = true,
-                can_edit = true,
-                is_pinned = true,
-                marked_as_ads = true,
-                is_favorite = true,
-                postponed_id = 44
+                signerId = 65,
+                copyHistory = arrayOf(2, 4),
+                canPin = true,
+                canDelete = true,
+                canEdit = true,
+                isPinned = true,
+                markedAsAds = true,
+                isFavorite = true,
+                postponedId = 44
         )
         val service = WallService
         service.add(post)
@@ -156,92 +156,92 @@ class WallServiceTest {
     fun updateFalse() {
         val post = Post(
                 id = 4,
-                owner_id = 111,
-                from_id = 21,
-                created_by = 22,
+                ownerId = 111,
+                fromId = 21,
+                createdBy = 22,
                 date = 22,
                 text = "Hello, world!",
-                reply_owner_id = 33,
-                reply_post_id = 33,
-                friends_only = 1,
+                replyOwnerId = 33,
+                replyPostId = 33,
+                friendsOnly = 1,
                 comments = Comments(
                         count = 9845,
-                        can_post = false,
-                        groups_can_post = true,
-                        can_close = true,
-                        can_open = true
+                        canPost = false,
+                        groupsCanPost = true,
+                        canClose = true,
+                        canOpen = true
                 ),
                 copyright = "Piotr",
                 likes = Likes(
                         count = 2,
-                        user_likes = true,
-                        can_like = true,
-                        can_publish = true
+                        userLikes = true,
+                        canLike = true,
+                        canPublish = true
                 ),
                 reposts = Reposts(
                         count = 3,
-                        user_reposted = false
+                        userReposted = false
                 ),
                 views = Views(
                         count = 3458
                 ),
-                post_type = "message",
-                post_source = null,
+                postType = "message",
+                postSource = null,
                 geo = null,
-                signer_id = 65,
-                copy_history = arrayOf(2, 4),
-                can_pin = true,
-                can_delete = true,
-                can_edit = true,
-                is_pinned = true,
-                marked_as_ads = true,
-                is_favorite = true,
-                postponed_id = 44
+                signerId = 65,
+                copyHistory = arrayOf(2, 4),
+                canPin = true,
+                canDelete = true,
+                canEdit = true,
+                isPinned = true,
+                markedAsAds = true,
+                isFavorite = true,
+                postponedId = 44
         )
 
         val post2 = Post(
                 id = 10,
-                owner_id = 111,
-                from_id = 21,
-                created_by = 22,
+                ownerId = 111,
+                fromId = 21,
+                createdBy = 22,
                 date = 22,
                 text = "Hello, world!",
-                reply_owner_id = 33,
-                reply_post_id = 33,
-                friends_only = 1,
+                replyOwnerId = 33,
+                replyPostId = 33,
+                friendsOnly = 1,
                 comments = Comments(
                         count = 9845,
-                        can_post = false,
-                        groups_can_post = true,
-                        can_close = true,
-                        can_open = true
+                        canPost = false,
+                        groupsCanPost = true,
+                        canClose = true,
+                        canOpen = true
                 ),
                 copyright = "Vladimir",
                 likes = Likes(
                         count = 2,
-                        user_likes = true,
-                        can_like = true,
-                        can_publish = true
+                        userLikes = true,
+                        canLike = true,
+                        canPublish = true
                 ),
                 reposts = Reposts(
                         count = 3,
-                        user_reposted = false
+                        userReposted = false
                 ),
                 views = Views(
                         count = 3458
                 ),
-                post_type = "message",
-                post_source = null,
+                postType = "message",
+                postSource = null,
                 geo = null,
-                signer_id = 65,
-                copy_history = arrayOf(2, 4),
-                can_pin = true,
-                can_delete = true,
-                can_edit = true,
-                is_pinned = true,
-                marked_as_ads = true,
-                is_favorite = true,
-                postponed_id = 44
+                signerId = 65,
+                copyHistory = arrayOf(2, 4),
+                canPin = true,
+                canDelete = true,
+                canEdit = true,
+                isPinned = true,
+                markedAsAds = true,
+                isFavorite = true,
+                postponedId = 44
         )
         val service = WallService
         service.add(post)

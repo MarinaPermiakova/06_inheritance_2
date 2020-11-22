@@ -21,7 +21,7 @@ object WallService {
         }
         if (index == -1) res = false
         else {
-            post.owner_id = posts[index].owner_id
+            post.ownerId = posts[index].ownerId
             post.date = posts[index].date
             posts[index] = post
         }

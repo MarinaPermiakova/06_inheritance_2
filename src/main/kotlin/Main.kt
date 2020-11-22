@@ -1,157 +1,157 @@
 fun main() {
     val original = Post(
             id = 1,
-            owner_id = 111,
-            from_id = 21,
-            created_by = 22,
+            ownerId = 111,
+            fromId = 21,
+            createdBy = 22,
             date = 22,
             text = "Hello, world!",
-            reply_owner_id = 33,
-            reply_post_id = 33,
-            friends_only = 1,
+            replyOwnerId = 33,
+            replyPostId = 33,
+            friendsOnly = 1,
             comments = Comments(
                     count = 9845,
-                    can_post = false,
-                    groups_can_post = true,
-                    can_close = true,
-                    can_open = true
+                    canPost = false,
+                    groupsCanPost = true,
+                    canClose = true,
+                    canOpen = true
             ),
             copyright = "Piotr",
             likes = Likes(
                     count = 2,
-                    user_likes = true,
-                    can_like = true,
-                    can_publish = true
+                    userLikes = true,
+                    canLike = true,
+                    canPublish = true
             ),
             reposts = Reposts(
                     count = 3,
-                    user_reposted = false
+                    userReposted = false
             ),
             views = Views(
                     count = 3458
             ),
-            post_type = "message",
-            post_source = null,
+            postType = "message",
+            postSource = null,
             geo = null,
-            signer_id = 65,
-            copy_history = arrayOf(2, 4),
-            can_pin = true,
-            can_delete = true,
-            can_edit = true,
-            is_pinned = true,
-            marked_as_ads = true,
-            is_favorite = true,
-            postponed_id = 44
+            signerId = 65,
+            copyHistory = arrayOf(2, 4),
+            canPin = true,
+            canDelete = true,
+            canEdit = true,
+            isPinned = true,
+            markedAsAds = true,
+            isFavorite = true,
+            postponedId = 44
     )
 
     val originalUpdated = Post(
             id = 1,
-            owner_id = 200,
-            from_id = 21,
-            created_by = 22,
+            ownerId = 200,
+            fromId = 21,
+            createdBy = 22,
             date = 555,
             text = "Hello, cosmos!",
-            reply_owner_id = 33,
-            reply_post_id = 33,
-            friends_only = 1,
+            replyOwnerId = 33,
+            replyPostId = 33,
+            friendsOnly = 1,
             comments = Comments(
                     count = 9845,
-                    can_post = false,
-                    groups_can_post = true,
-                    can_close = true,
-                    can_open = true
+                    canPost = false,
+                    groupsCanPost = true,
+                    canClose = true,
+                    canOpen = true
             ),
             copyright = "Vladimir",
             likes = Likes(
                     count = 2,
-                    user_likes = true,
-                    can_like = true,
-                    can_publish = true
+                    userLikes = true,
+                    canLike = true,
+                    canPublish = true
             ),
             reposts = Reposts(
                     count = 3,
-                    user_reposted = false
+                    userReposted = false
             ),
             views = Views(
                     count = 3458
             ),
-            post_type = "message",
-            post_source = null,
+            postType = "message",
+            postSource = null,
             geo = null,
-            signer_id = 65,
-            copy_history = arrayOf(2, 4),
-            can_pin = true,
-            can_delete = true,
-            can_edit = true,
-            is_pinned = true,
-            marked_as_ads = true,
-            is_favorite = true,
-            postponed_id = 44
+            signerId = 65,
+            copyHistory = arrayOf(2, 4),
+            canPin = true,
+            canDelete = true,
+            canEdit = true,
+            isPinned = true,
+            markedAsAds = true,
+            isFavorite = true,
+            postponedId = 44
     )
 
     val service = WallService
     service.add(original)
-    println(original.owner_id.toString() + ", " + original.date.toString() + ", " + original.text)
+    println(original.ownerId.toString() + ", " + original.date.toString() + ", " + original.text)
 
     service.update(originalUpdated)
-    println(originalUpdated.owner_id.toString() + ", " + originalUpdated.date.toString() + ", " + originalUpdated.text)
+    println(originalUpdated.ownerId.toString() + ", " + originalUpdated.date.toString() + ", " + originalUpdated.text)
 
 
     val audio = Audio(
             id = 5,
-            album_id = 7,
+            albumId = 7,
             artist = "Vasja",
             date = 88,
             duration = 44,
-            genre_id = 4,
-            lyrics_id = 2,
-            owner_id = 12,
-            no_search = 1,
+            genreId = 4,
+            lyricsId = 2,
+            ownerId = 12,
+            noSearch = 1,
             title = "song",
             url = "htp"
     )
 
     val video = Video(
             id = 23,
-            owner_id = 55,
+            ownerId = 55,
             title = "title",
             description = "description",
             duration = 100,
             image = arrayOf(1, 2, 3),
-            first_frame = arrayOf(4, 5, 6),
+            firstFrame = arrayOf(4, 5, 6),
             date = 23,
-            adding_date = 44,
+            addingDate = 44,
             views = 100,
-            local_views = 20,
+            localViews = 20,
             comments = 3,
             player = "player",
             platform = "platform",
-            can_add = 1,
-            is_private = 1,
-            access_key = "access",
+            canAdd = 1,
+            isPrivate = 1,
+            accessKey = "access",
             processing = 2,
-            is_favorite = true,
-            can_comment = 0,
-            can_edit = 1,
-            can_like = 1,
-            can_repost = 1,
-            can_subscribe = 1,
-            can_add_to_faves = 1,
-            can_attach_link = 1,
+            isFavorite = true,
+            canComment = 0,
+            canEdit = 1,
+            canLike = 1,
+            canRepost = 1,
+            canSubscribe = 1,
+            canAddToFaves = 1,
+            canAttachLink = 1,
             width = 23,
             height = 55,
-            user_id = 54,
+            userId = 54,
             converting = 1,
             added = 1,
-            is_subscribed = 1,
+            isSubscribed = 1,
             repeat = 1,
             type = "type",
             balance = 1,
-            live_status = "live",
+            liveStatus = "live",
             live = 1,
             upcoming = 1,
             spectators = 1,
-            likes = Likes(2, user_likes = true, can_like = true, true),
+            likes = Likes(2, userLikes = true, canLike = true, true),
             reposts = Reposts(2, true)
 
     )
